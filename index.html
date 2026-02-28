@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BEASTO AI — Elite-level, science-backed fitness intelligence system. Muscle anatomy, hypertrophy science, training programs, and calculators.">
+  <title>BEASTO AI — Fitness Intelligence System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- Top Header -->
+  <header class="topbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+    <div class="logo" onclick="showDashboard()">
+      <div class="logo-icon">🦁</div>
+      <div class="logo-text">BEASTO <span>AI</span></div>
+    </div>
+
+    <div class="search-container">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search muscles, exercises, topics..."
+          autocomplete="off"
+        >
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <div class="header-right">
+      <div class="header-badge">Evidence-Based</div>
+    </div>
+  </header>
+
+  <!-- Main Area -->
+  <div class="main-area">
+
+    <!-- Sidebar Overlay (mobile) -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo-area">
+        <div class="sidebar-brand" onclick="showDashboard()">Knowledge Base</div>
+      </div>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <!-- Populated by app.js -->
+      </ul>
+    </aside>
+
+    <!-- Content Panel -->
+    <main class="content-panel" id="mainContent">
+      <!-- Populated by app.js -->
+    </main>
+
+  </div><!-- /.main-area -->
+
+</div><!-- /.app-shell -->
+
+<!-- Scripts: data first, then app logic -->
+<script src="js/data/muscles.js"></script>
+<script src="js/data/domains.js"></script>
+<script src="js/calculators.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
